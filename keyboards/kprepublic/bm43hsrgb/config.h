@@ -49,7 +49,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifdef RGB_DI_PIN
     #define RGBLED_NUM 53
     #define RGBLIGHT_HUE_STEP 8
-    #define RGBLIGHT_SAT_STEP 8
+    #define RGBLIGHT_SAT_STEP 1
     #define RGBLIGHT_VAL_STEP 8
     #define RGBLIGHT_LIMIT_VAL 180 /* The maximum brightness level */
     #define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
@@ -64,3 +64,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define RGBLIGHT_EFFECT_RGB_TEST
     #define RGBLIGHT_EFFECT_ALTERNATING
 #endif
+
+#define PERMISSIVE_HOLD
+
+#define TAPPING_TERM 200
