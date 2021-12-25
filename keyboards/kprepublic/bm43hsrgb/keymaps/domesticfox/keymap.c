@@ -17,13 +17,14 @@
 #include QMK_KEYBOARD_H
 
 typedef enum {
+	TD_NONE,
+	TD_UNKNOWN,
     TD_SINGLE_TAP,
     TD_SINGLE_HOLD,
     TD_DOUBLE_TAP,
     TD_DOUBLE_HOLD,
     TD_DOUBLE_SINGLE_TAP, // Send two single taps
-	TD_NONE,
-	TD_UNKNOWN,
+	
 } td_state_t;
 
 typedef struct {
@@ -123,7 +124,8 @@ td_state_t cur_dance(qk_tap_dance_state_t *state) {
         if (state->interrupted) return TD_DOUBLE_SINGLE_TAP;
         else if (state->pressed) return TD_DOUBLE_HOLD;
         else return TD_DOUBLE_TAP;
-    } else return TD_UNKNOWN;
+    } 
+	else return TD_UNKNOWN;
 }
 
 // Create an instance of 'td_tap_t' for the 'ly' tap dance.
@@ -163,8 +165,8 @@ void ly_finished(qk_tap_dance_state_t *state, void *user_data) {
         // Last case is for fast typing. Assuming your key is `f`:
         // For example, when typing the word `buffer`, and you want to make sure that you send `ff` and not `Esc`.
         // In order to type `ff` when typing fast, the next character will have to be hit within the `TAPPING_TERM`, which by default is 200ms.
-        case TD_DOUBLE_SINGLE_TAP: 
-			tap_code(KC_SLASH); register_code(KC_SLASH);
+        //case TD_DOUBLE_SINGLE_TAP: 
+		//	tap_code(KC_SLASH); tap_code(KC_SLASH);
 		default:
 		break;
     }
