@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[2] = LAYOUT(
         KC_F1,   KC_F2, KC_F3, KC_F4, KC_F5, KC_F5, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12,
         ALT_TAB,   KC_1, KC_2,  KC_3,  KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0,
-        KC_CAPS,          KC_LBRC, KC_RBRC, KC_BSLS, _______, _______, _______, _______, KC_EQL, KC_UP, KC_MINS,
+        KC_CAPS,          KC_LBRC, KC_RBRC, KC_BSLS, _______, _______, _______, KC_MINS, KC_EQL, KC_UP, KC_MINS,
         KC_LCTL, KC_LGUI, _______, KC_SLSH,                KC_BSPC,             KC_RALT, KC_LEFT, KC_DOWN, KC_RGHT
 		
     ),
@@ -99,10 +99,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 	#
     [4] = LAYOUT(
-        RGB_MOD,   _______, RGB_SAD, RGB_VAI, RGB_SAI, _______, _______, _______, _______, _______, _______, C(S(KC_ESC)),
-        RGB_TOG,   RGB_HUD, RGB_VAD,  RGB_HUI,  _______, _______, _______, _______, _______, _______, _______,
+        RGB_MOD,   RGB_HUI, RGB_SAI, RGB_VAI, _______, _______, _______, _______, _______, _______, _______, C(S(KC_ESC)),
+        RGB_TOG,   RGB_HUD, RGB_SAD,  RGB_VAD,  _______, _______, _______, _______, _______, _______, _______,
         _______,          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        RESET, _______, _______, _______,                KC_PSCR,             _______, KC_MPRV, KC_MNXT, _______
+        RESET, _______, _______, KC_TAB,                KC_PSCR,             _______, KC_MPRV, KC_MNXT, _______
     ),
 };
 
