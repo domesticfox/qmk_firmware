@@ -1,0 +1,17 @@
+OLED_ENABLE = yes
+SRC += oled/oled-kiitchi.c oled/oled-icons.c
+OPT_DEFS += -DLEFTCAT
+OLED_DRIVER = SSD1306
+
+BOOTMAGIC_ENABLE = no
+MOUSEKEY_ENABLE = no
+EXTRAKEY_ENABLE = no
+CONSOLE_ENABLE = no
+NKRO_ENABLE = yes
+
+WPM_ENABLE = yes
+
+
+TAP_DANCE_ENABLE = yes
+AUTO_SHIFT_ENABLE = no
+
